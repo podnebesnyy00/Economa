@@ -4,45 +4,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Economa</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main-style.css">
 </head>
 
 <body>
-    <header>
-        <div class="header">
-            <h1 id="heading">Economa</h1>
+    <div class="content">
+        <header>
+            <div class="header">
+                <h1 class="heading" id="main-heading">
+                    <a href="index.html">Economa</a>
 
 
-        </div>
-    </header>
-    <main>
-        <div class="aside-block">
-            <p> Главная </p>
-            <p> Калькулятор задач</p>
-        </div>
-        <div class="about">
-            <div>
-                <h1>Что такое Economa?</h1>
+                </h1>
+
+                <div id="header2">
+                    <h1 class="heading">
+                        <div class="sections-of-heading">
+                            <a href="theory.html">Theory</a>
+                        </div>    
+                    </h1>
+                    <h1 class="heading">
+                        <a href="calculator.html">
+                            <div class="sections-of-heading">
+                                Calculator
+                            </div>    
+                        </a>   
+                    </h1>
+                    <h1 class="heading"> 
+                        <div class="sections-of-heading">
+                            <a href="index.html">About</a>
+                        </div>
+                    </h1>
+                </div>
+
+
             </div>
-            <div>
-                <p>
-                    Economa - это образовательный портал для изучения всего связанного с экономикой. Ознакомиться с теорией можно с нуля до pro-уровня, сравнимого с образованием в университете по профилям связанных с экономическими специальностями можно здесь. Наслаждайтесь!
-                </p>
+        </header>
+        <main>
+            
+            <!-- <div class="aside-block">
+                <div class="border-section">
+                    <p>
+                        <a class="section" href="index.html">Главная</a>
+                    </p>
+                </div>
+                <div class="border-section">
+                    <p>
+                        <a class="section" href="calculator.html">Калькулятор для №16 </a>
+                    </p>
+                </div>
+                <div class="border-section">
+                    <p>
+                        <div class="kinds-of-problems">
+                            <ul> 
+                                <div class="section" id="Theory" onclick="sectionsOfTheory()">Теория к экономическим задачам ЕГЭ</div>
+                                <div id="spisok1" >
+                                    <li>Аннуитетные платежи</li>
+                                    <li>Дифференцированные платежи</li>
+                                    <li>Смешанные платежи</li>
+                                    <li>Вклады</li>
+                                    <li>Оптимизация</li>    
+                                </div>
+                            </ul>
+                        </div>
+                    </p>
+                </div>
+            </div> -->
+            <div class="about">
+                <div id="what-is">
+                    <h1>
+                        Что такое Economa?
+                    </h1> <br>
+                </div>
+                <div id="text-is">
+                    <p>
+                        Economa - это образовательный портал для изучения экономики и смежных с нею наук. Здесь можно как ознакомиться с теорией, так и попрактиковаться в решении экономических задач. Наслаждайтесь!
+                    </p>
+                </div> <br>
+                <div>
+                    <img src="https://rg.ru/uploads/images/189/88/50/iStock-1090046326.jpg" id="img1">
+                </div>
             </div>
             
-        </div>
+
+        
+        </main>
+
+        <footer class="footer">
+            <div class="telegram">
+                <p>
+                    <a href="https://t.me/podnebesny00" class="contacts">Telegram</a>
+                </p>
+            </div>
+            <div class="email">
+                <p>
+                    <a href="mailto:gigantofthought@outlook.com" class="contacts">Email</a>
+                </p>
+            </div>
+
+            <div class="heading-in-footer">
+                <h1 class="heading" id="heading-in-footer1">
+                    Economa
+                </h1>
 
 
-    </main>
+            </div>
+            <span id="All-rights-reserved">© 2024 "Economa". Все права защищены.</span>
 
-
-    <footer class="footer">
-        <div id="contacts">
-            <p>Telegram</p>
-            <p>Email</p>
-        </div>
-
-
-    </footer>
+        </footer>
+    </div>
 </body>
+<script src="scriptindex.js"></script>
 </html>
