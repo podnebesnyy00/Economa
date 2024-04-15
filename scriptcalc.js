@@ -43,7 +43,7 @@ function mainFunction_for_ann(){
         } else{
             let result = payment*(100/(percents))*(1-(100/(100+percents))**(years));
             console.log('You choosed summ of credit');
-            document.getElementById('result1').innerHTML = result;
+            document.getElementById('result1').innerHTML = result.toFixed(6);
         }
     }
 
@@ -51,34 +51,41 @@ function mainFunction_for_ann(){
         if (isNaN(payment) == false){
             document.getElementById('result1').innerHTML = payment;
         } else{
-            let result = ((Summ*percents)/100)*(1/(1-(100/(100+percents))**years))
-            document.getElementById('result1').innerHTML = result;
+            let result = ((Summ*percents)/100)*(((100+percents)/100)**years)/(((100+percents)/100)**years-1)
+            document.getElementById('result1').innerHTML = result.toFixed(6); 
         }
         
     }
 
     if (choice == "Переплата по кредиту"){
         if(isNaN(payment)){
-            payment = ((Summ*percents)/100)*(1/(1-(100/(100+percents))**years));
+            payment = ((Summ*percents)/100)*(((100+percents)/100)**years)/(((100+percents)/100)**years-1)
         }
         // payment = ((Summ*percents)/100)*(1/(1-(100/(100+percents))**years));
         
         let result = years*payment-Summ
-        document.getElementById('result1').innerHTML = result;
+        document.getElementById('result1').innerHTML = result.toFixed(6);
     }
 
     if (choice == "Сумма выплат по кредиту"){
+        if(isNaN(overpayment) == true){
+            let payment = ((Summ*percents)/100)*(((100+percents)/100)**years)/(((100+percents)/100)**years-1)
+            let overpayment = years*payment-Summ;
+            let result = (years*overpayment)/(years-(100/(percents))*(1-(100/(100+percents))**(years)));
+            document.getElementById('result1').innerHTML = result.toFixed(6);
+        }
         let result = (years*overpayment)/(years-(100/(percents))*(1-(100/(100+percents))**(years)));
-        document.getElementById('result1').innerHTML = result;
+        document.getElementById('result1').innerHTML = result.toFixed(6);
 
     }
 
 
     
     console.log("You touched the button!")
-
+    
+    // для таблички что то такое:
     // for(let i = 0; i < years; i++){
-
+            //innerHTML и т.д.
         
     // }
 
